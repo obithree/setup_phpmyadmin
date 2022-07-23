@@ -1,0 +1,17 @@
+---
+
+###1:yum.yml
+#yumでインストールものをインストール
+#Apache PHP phpMyAdmin
+#PHPの設定をおこなう。
+
+###2.pMA_configure.yml
+#RDSのドメインを取得する。
+#2つの設定ファイルをtemplateモジュールでコピーする。
+
+###3.start_apache.yml
+#apacheを起動する。
+
+- include_tasks: yum.yml
+- include_tasks: pMA_Configure.yml
+- include_tasks: start_apache.yml

@@ -1,0 +1,32 @@
+---
+
+#タイムゾーンを変更する
+- name: Set Timezone
+  timezone:
+    name: "{{ common.timezone }}"
+
+#localeの設定を変更する。
+#もし、すでの設定先のLANGだった場合スキップする。
+- name: Change locale Setting
+  command: localectl set-locale LANG={{ common.lang }}
+  when: ansible_env.LANG != common.lang
+  register: locale_facts
+
+#YUMのアップデートを行う。
+- name: Configure / Update Yum Packages
+  yum:
+    name: '*'
+    state: latest
+    update_cache: yes
+
+#EPELレポジトリのダウンロード
+- name: Get EPEL Repository
+  yum:
+    name: "{{ common.repo.epel_url }}"
+    state: present
+
+#Remiレポジトリのタウンロード
+- name: Get Remi Repository
+  yum:
+    name: "{{ common.repo.remi_url }}"
+    state: present
