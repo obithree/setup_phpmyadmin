@@ -1,2 +1,4 @@
 database_hostname: default_database_hostname
+database_username: default_database_username
+database_password: default_database_password
 blowfish_secret: default_blowfish_secret

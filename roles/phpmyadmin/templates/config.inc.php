@@ -39,8 +39,8 @@ $cfg['Servers'][$i]['controlpass']   = '';          // access to the "mysql/user
                                                     // used for all relational
                                                     // features (pmadb)
 $cfg['Servers'][$i]['auth_type']     = 'cookie';    // Authentication method (config, http or cookie based)?
-$cfg['Servers'][$i]['user']          = '';          // MySQL user
-$cfg['Servers'][$i]['password']      = '';          // MySQL password (only needed
+$cfg['Servers'][$i]['user']          = '{{ database_username }}';          // MySQL user
+$cfg['Servers'][$i]['password']      = '{{ database_password }}';          // MySQL password (only needed
                                                     // with 'config' auth_type)
 $cfg['Servers'][$i]['only_db']       = '';          // If set to a db-name, only
                                                     // this db is displayed in left frame
