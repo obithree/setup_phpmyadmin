@@ -15,7 +15,7 @@ php_dest: /etc/php.ini
 php_tz: '"Asia/Tokyo"'
 
 #phpMyAdminの設定ファイル1のコピー先
-phpmyadmin1_dest: /etc/httpd/conf.d/phpMyAdmin.conf
+apache_phpmyadmin_setting_path: /etc/httpd/conf.d/phpMyAdmin.conf
 
 #phpMyAdminの設定ファイル2のコピー先
-phpmyadmin2_dest: /etc/phpMyAdmin/config.inc.php
+phpmyadmin_setting_path: /etc/phpMyAdmin/config.inc.php

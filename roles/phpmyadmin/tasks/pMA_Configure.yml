@@ -2,18 +2,18 @@
 ##templateモジュールで、設定ファイルをコピーする。
 ##DBのIPアドレス/ドメイン欄に変数を置いており、そこにRDSのドメインが入る。
 
-- name: Configure phpMyAdmin1 "/etc/httpd/conf.d/phpMyAdmin.conf"
+- name: Configure Apache Setting
   template:
     src: phpMyAdmin.conf
-    dest: "{{ phpmyadmin1_dest }}"
+    dest: "{{ apache_phpmyadmin_setting_path }}"
     owner: root
     group: root
     mode: 0644
 
-- name: Configure phpMyAdmin2 "/etc/phpMyAdmin/config.inc.php"
+- name: Configure phpMyAdmin Setting
   template:
     src: config.inc.php
-    dest: "{{ phpmyadmin2_dest }}"
+    dest: "{{ phpmyadmin_setting_path }}"
     owner: root
     group: root
     mode: 0644
