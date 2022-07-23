@@ -11,7 +11,7 @@
  * This is needed for cookie based authentication to encrypt password in
  * cookie
  */
-$cfg['blowfish_secret'] = 'T6LLCALF6ricvqAvXDIGpJ8fB3yo0s2c'; /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */
+$cfg['blowfish_secret'] = '{{ blowfish_secret }}'; /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */
 
 /**
  * Server(s) configuration
