@@ -3,8 +3,6 @@
 common:
   timezone: Asia/Tokyo
 
-  lang: ja_JP.utf8
-
 ##リポジトリのURL
 #epelリポジトリのURL
   repo:
