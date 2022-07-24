@@ -1,19 +1,4 @@
 ---
-###3.apacheの変数ファイル
-
-##PHP
-#インストールするもの
-php_pkgs:
-  - php
-  - php-mysql
-  - php-mcrypt
-
-#phpの設定ファイルのパス
-php_dest: /etc/php.ini
-
-#phpのタイムゾーンの設定
-php_tz: '"Asia/Tokyo"'
-
 #phpMyAdminの設定ファイル1のコピー先
 apache_phpmyadmin_setting_path: /etc/httpd/conf.d/phpMyAdmin.conf
 

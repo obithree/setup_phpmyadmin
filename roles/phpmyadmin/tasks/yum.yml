@@ -10,25 +10,19 @@
     name: httpd
     state: latest
 
-#PHPのインストール
-- name: "Install php and php DepTools"
+- name: Enable to install PHP.
+  shell: "amazon-linux-extras enable php7.4"
+  changed_when: False
+
+- name: Install PHP.
   yum:
-    name: "{{ php_pkgs }}"
-    state: latest
-#    enablerepo: remi
+    name: php
+    enablerepo: amzn2extra-php7.4
+    state: present
 
 #phpMyAdminのインストール
 - name: "Install phpMyAdmin"
   yum:
     name: phpmyadmin
     state: latest
-#    enablerepo: remi
-
-#PHPのタイムゾーンの設定をおこなう。
-- name: " Configure php's Timezone"
-  ini_file:
-    dest: "{{ php_dest }}"
-    section: Date
-    option: date.timezone
-    value: "{{ php_tz }}"
-
+    enablerepo: remi
